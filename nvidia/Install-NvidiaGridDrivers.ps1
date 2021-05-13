@@ -18,7 +18,7 @@ New-ItemProperty -Path $RegPath -Name $RegKey -Value $RegVal -PropertyType DWord
 #Get-ItemProperty -Path $RegPath
 
 # Download & Install Certification File
-$CertFileURL = "https://s3.amazonaws.com/nvidia-gaming/GridSwCert-Windows.cert"
+$CertFileURL = "https://nvidia-gaming.s3.amazonaws.com/GridSwCert-Archive/GridSwCertWindows_2021_10_2.cert"
 $CertFilePath = "C:\Users\Administrator\Desktop\GridSwCert.txt"
 $CertFileInstallPath = "C:\Users\Public\Documents"
 
@@ -33,4 +33,4 @@ Copy-Item -Path $CertFilePath -Destination $CertFileInstallPath
 # Remove-Item -Path $LocalPath -Recurse
 # Remove-Item -Path $CertFilePath
 
-# Restart-Computer
+Restart-Computer
